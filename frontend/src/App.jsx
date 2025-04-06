@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-const API = "/api/todos";
-
+const API = "https://mern-todo-monorepo.vercel.app/api/todos";
 function App() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
