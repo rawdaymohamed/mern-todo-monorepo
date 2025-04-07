@@ -1,5 +1,4 @@
 const express = require('express');
-const serverless = require('serverless-http');
 const cors = require('cors');
 
 const app = express();
@@ -30,3 +29,6 @@ app.delete('/api/todos/:id', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+module.exports = (req, res) => {
+    return app(req, res);
+};
